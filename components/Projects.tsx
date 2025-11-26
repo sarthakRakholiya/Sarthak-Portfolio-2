@@ -8,7 +8,7 @@ import CartoonBulb from "./CartoonBulb";
 export default function Projects() {
     const projects = [
         {
-            title: "Ravel Trip",
+            title: "Travel Planner",
             description: "Interactive travel planning platform with real-time location integration.",
             features: ["Trip scheduling", "Real-time data", "User auth", "SEO-optimized"],
             tech: ["Next.js", "Redux", "HTML", "CSS"],
@@ -16,24 +16,24 @@ export default function Projects() {
             icon: Globe,
         },
         {
-            title: "ZigCalender",
+            title: "Scheduling App",
             description: "Responsive scheduling application for managing availability and appointments.",
-            features: ["Calendar views", "Real-time booking", "PWA support", "Vuexy theme"],
+            features: ["Calendar views", "Real-time booking", "PWA support", "Custom theme"],
             tech: ["React.js", "Redux", "SCSS"],
             color: "bg-blue-400",
             icon: Layout,
         },
         {
-            title: "ZigHRMS",
+            title: "HR Management System",
             description: "Modern HR management platform for leave, expense, and document handling.",
             features: ["Leave management", "Expense tracking", "Document handling"],
-            tech: ["React.js", "Redux", "Vuexy"],
-            link: "https://hrms.zignuts.dev/home",
+            tech: ["React.js", "Redux", "Custom UI"],
+            link: "#",
             color: "bg-pink-400",
             icon: Database,
         },
         {
-            title: "Mento AI",
+            title: "AI Goal Manager",
             description: "AI-driven platform for personal and professional goal management.",
             features: ["AI goal setting", "Interactive flows", "Real-time updates"],
             tech: ["Next.js", "TypeScript", "MUI"],
@@ -41,7 +41,7 @@ export default function Projects() {
             icon: Brain,
         },
         {
-            title: "Cravenow",
+            title: "Multi-Store Platform",
             description: "Comprehensive platform for multi-store management and employee scheduling.",
             features: ["Multi-store", "Employee scheduling", "Menu uploads"],
             tech: ["Next.js", "Tailwind", "MUI"],
@@ -49,7 +49,7 @@ export default function Projects() {
             icon: Smartphone,
         },
         {
-            title: "Mosaic",
+            title: "Resource Planner",
             description: "AI-driven resource management platform for project planning.",
             features: ["AI Forecasting", "Resource Allocation", "Utilization Tracking"],
             tech: ["React", "Styled Components"],
@@ -57,7 +57,7 @@ export default function Projects() {
             icon: Layers,
         },
         {
-            title: "Axon-Park",
+            title: "Course Platform",
             description: "Web platform for delivering and managing educational courses.",
             features: ["Course Management", "Interactive Learning", "Role-Based Auth"],
             tech: ["Next.js", "Tailwind", "MUI"],
