@@ -79,7 +79,7 @@ export default function Projects() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-black text-center uppercase tracking-tight"
+                        className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight"
                     >
                         Featured <span className="text-primary">Issues</span>
                     </motion.h2>
@@ -97,7 +97,7 @@ export default function Projects() {
                             className="group relative bg-white border-4 border-black shadow-cartoon hover:shadow-cartoon-lg transition-all rounded-sm flex flex-col h-full"
                         >
                             {/* Issue Number Badge */}
-                            <div className="absolute -top-4 -left-4 bg-red-500 text-white w-12 h-12 flex items-center justify-center font-black border-4 border-black rounded-full shadow-cartoon-sm z-20 -rotate-12">
+                            <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 bg-red-500 text-white w-10 h-10 md:w-12 md:h-12 flex items-center justify-center font-black border-4 border-black rounded-full shadow-cartoon-sm z-20 -rotate-12 text-sm md:text-base">
                                 #{index + 1}
                             </div>
 
@@ -124,20 +124,20 @@ export default function Projects() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6 flex-grow flex flex-col">
-                                <h3 className="text-2xl font-black text-black mb-2 uppercase italic">
+                            <div className="p-4 md:p-6 flex-grow flex flex-col">
+                                <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase italic">
                                     {project.title}
                                 </h3>
 
                                 <div className="mb-4">
-                                    <span className="text-xs font-black bg-black text-white px-2 py-0.5 uppercase tracking-widest">The Plot</span>
-                                    <p className="text-black font-medium mt-2 leading-relaxed border-l-4 border-gray-300 pl-3">
+                                    <span className="text-[10px] md:text-xs font-black bg-black text-white px-2 py-0.5 uppercase tracking-widest">The Plot</span>
+                                    <p className="text-black font-medium mt-2 leading-relaxed border-l-4 border-gray-300 pl-3 text-sm md:text-base">
                                         {project.description}
                                     </p>
                                 </div>
 
                                 <div className="mt-auto">
-                                    <span className="text-xs font-black bg-black text-white px-2 py-0.5 uppercase tracking-widest">The Cast</span>
+                                    <span className="text-[10px] md:text-xs font-black bg-black text-white px-2 py-0.5 uppercase tracking-widest">The Cast</span>
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         {project.tech.map((tech, i) => (
                                             <span

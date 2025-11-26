@@ -22,7 +22,7 @@ export default function About() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-4xl md:text-6xl font-black text-center uppercase tracking-tight"
+                            className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight"
                         >
                             Character <span className="text-primary">Profile</span>
                         </motion.h2>
@@ -40,7 +40,7 @@ export default function About() {
                             <motion.div
                                 animate={{ rotate: [-2, 2, -2] }}
                                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                className="relative w-full max-w-sm"
+                                className="relative w-full max-w-[280px] md:max-w-sm"
                             >
                                 {/* Lanyard String */}
                                 <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-4 h-24 bg-red-500 border-x-4 border-black z-0" />
@@ -108,7 +108,7 @@ export default function About() {
                                     <Zap className="w-6 h-6 text-yellow-500 fill-current" />
                                     The Origin Story
                                 </h3>
-                                <p className="font-medium text-lg leading-relaxed">
+                                <p className="font-medium text-base md:text-lg leading-relaxed">
                                     I'm a <span className="font-black bg-yellow-200 px-1">Software Development Engineer</span> with over 3.5+ years of experience. My journey involves crafting robust web applications using <span className="font-black text-blue-600">React</span> and <span className="font-black text-black">Next.js</span>. I don't just write code; I build experiences.
                                 </p>
                             </motion.div>
@@ -125,7 +125,7 @@ export default function About() {
                                     <Brain className="w-6 h-6 text-pink-500" />
                                     Technical Arsenal
                                 </h3>
-                                <p className="font-medium text-lg leading-relaxed">
+                                <p className="font-medium text-base md:text-lg leading-relaxed">
                                     My inventory is stocked with deep knowledge of <span className="font-black">JavaScript (ES6+)</span> and <span className="font-black">TypeScript</span>. I wield <span className="font-black text-cyan-500">Tailwind CSS</span> and <span className="font-black text-blue-500">MUI</span> to create pixel-perfect interfaces, and manage complex state with Redux like a pro.
                                 </p>
                             </motion.div>
@@ -142,15 +142,15 @@ export default function About() {
                                     <MessageSquare className="w-6 h-6 text-green-500" />
                                     Special Abilities
                                 </h3>
-                                <p className="font-medium text-lg leading-relaxed">
+                                <p className="font-medium text-base md:text-lg leading-relaxed">
                                     Beyond the code, I have a passive buff in <span className="font-black bg-green-200 px-1">Mentorship</span> and <span className="font-black bg-purple-200 px-1">Communication</span>. I've architected 7+ web apps, ensuring they are scalable, testable (thanks, Cypress!), and ready for the real world.
                                 </p>
                             </motion.div>
                         </div>
-                    </div>
-                </motion.div>
-            </div>
+                    </div >
+                </motion.div >
+            </div >
             <SectionDivider fill="fill-background" />
-        </section>
+        </section >
     );
 }

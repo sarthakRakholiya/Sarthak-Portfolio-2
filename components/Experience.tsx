@@ -37,7 +37,7 @@ export default function Experience() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-black text-center uppercase tracking-tight"
+                        className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight"
                     >
                         Adventure <span className="text-accent">Log</span>
                     </motion.h2>
@@ -45,7 +45,7 @@ export default function Experience() {
 
                 <div className="max-w-4xl mx-auto relative">
                     {/* Map Path (Dashed Line) */}
-                    <div className="absolute left-8 md:left-1/2 top-10 bottom-10 w-2 md:-translate-x-1/2 flex flex-col items-center justify-between z-0">
+                    <div className="absolute left-4 md:left-1/2 top-10 bottom-10 w-2 md:-translate-x-1/2 flex flex-col items-center justify-between z-0">
                         <div className="w-full h-full border-l-4 border-black border-dashed" />
                     </div>
 
@@ -56,34 +56,34 @@ export default function Experience() {
                                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                                className={`flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 pl-12 md:pl-0 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""
                                     }`}
                             >
                                 {/* Level Node (Center) */}
-                                <div className="relative z-10 flex-shrink-0 w-16 h-16 bg-white border-4 border-black rounded-full flex items-center justify-center shadow-cartoon">
+                                <div className="absolute left-0 md:relative md:left-auto z-10 flex-shrink-0 w-10 h-10 md:w-16 md:h-16 bg-white border-4 border-black rounded-full flex items-center justify-center shadow-cartoon">
                                     {exp.status === "current" ? (
-                                        <MapPin className="w-8 h-8 text-red-500 animate-bounce" />
+                                        <MapPin className="w-5 h-5 md:w-8 md:h-8 text-red-500 animate-bounce" />
                                     ) : (
-                                        <Trophy className="w-8 h-8 text-yellow-500" />
+                                        <Trophy className="w-5 h-5 md:w-8 md:h-8 text-yellow-500" />
                                     )}
                                 </div>
 
                                 {/* Content Card */}
                                 <div className="flex-1 w-full">
-                                    <div className={`relative bg-white border-4 border-black shadow-cartoon p-6 rounded-xl group hover:scale-[1.02] transition-transform ${exp.color}`}>
+                                    <div className={`relative bg-white border-4 border-black shadow-cartoon p-4 md:p-6 rounded-xl group hover:scale-[1.02] transition-transform ${exp.color}`}>
                                         {/* Level Badge */}
-                                        <div className="absolute -top-4 -right-4 bg-black text-white px-3 py-1 font-black border-2 border-white rounded-lg rotate-3 shadow-cartoon-sm">
+                                        <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 bg-black text-white px-2 py-0.5 md:px-3 md:py-1 font-black border-2 border-white rounded-lg rotate-3 shadow-cartoon-sm text-xs md:text-base">
                                             LEVEL {exp.level}
                                         </div>
 
-                                        <h3 className="text-2xl font-black text-black mb-1">{exp.title}</h3>
-                                        <div className="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                                        <h3 className="text-xl md:text-2xl font-black text-black mb-1">{exp.title}</h3>
+                                        <div className="font-bold text-gray-800 mb-4 flex flex-wrap items-center gap-2 text-sm md:text-base">
                                             <span>@{exp.company}</span>
-                                            <span className="w-1.5 h-1.5 bg-black rounded-full" />
-                                            <span>{exp.period}</span>
+                                            <span className="w-1.5 h-1.5 bg-black rounded-full hidden md:block" />
+                                            <span className="block md:inline w-full md:w-auto text-gray-500 md:text-gray-800">{exp.period}</span>
                                         </div>
 
-                                        <p className="font-medium text-black leading-relaxed bg-white/50 p-3 rounded-lg border-2 border-black/10">
+                                        <p className="font-medium text-black leading-relaxed bg-white/50 p-3 rounded-lg border-2 border-black/10 text-sm md:text-base">
                                             {exp.description}
                                         </p>
 
