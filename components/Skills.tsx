@@ -36,16 +36,16 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-muted relative overflow-hidden">
+        <section id="skills" className="py-10 md:py-20 bg-muted relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header with Prop */}
-                <div className="flex items-center justify-center gap-4 mb-16">
+                <div className="flex items-center justify-center gap-3 md:gap-4 mb-8 md:mb-16">
                     <CartoonGear />
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight"
+                        className="text-2xl md:text-6xl font-black text-center uppercase tracking-tight"
                     >
                         Skill <span className="text-secondary">Set</span>
                     </motion.h2>
@@ -53,23 +53,23 @@ export default function Skills() {
 
                 <div
                     ref={containerRef}
-                    className="relative min-h-[500px] md:min-h-[600px] bg-white text-black border-4 border-black shadow-cartoon-lg rounded-xl p-4 md:p-8 overflow-hidden"
+                    className="relative min-h-[400px] md:min-h-[600px] bg-white text-black border-2 md:border-4 border-black shadow-cartoon md:shadow-cartoon-lg rounded-xl p-3 md:p-8 overflow-hidden"
                     style={{
                         backgroundImage: "radial-gradient(rgba(0,0,0,0.1) 1px, transparent 1px)",
                         backgroundSize: "20px 20px",
                     }}
                 >
                     {/* Laptop Lid / Desk Surface Metaphor */}
-                    <div className="absolute top-0 left-0 w-full h-8 bg-gray-200 border-b-4 border-black flex items-center px-4 gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500 border border-black" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-500 border border-black" />
-                        <div className="w-3 h-3 rounded-full bg-green-500 border border-black" />
+                    <div className="absolute top-0 left-0 w-full h-6 md:h-8 bg-gray-200 border-b-2 md:border-b-4 border-black flex items-center px-3 md:px-4 gap-2">
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-red-500 border border-black" />
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-yellow-500 border border-black" />
+                        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-green-500 border border-black" />
                     </div>
 
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {skillCategories.map((category, catIndex) => (
-                            <div key={catIndex} className="space-y-4 md:space-y-6">
-                                <h3 className="text-lg md:text-xl font-black text-center uppercase border-b-4 border-black inline-block mx-auto px-2">
+                            <div key={catIndex} className="space-y-3 md:space-y-6">
+                                <h3 className="text-base md:text-xl font-black text-center uppercase border-b-2 md:border-b-4 border-black inline-block mx-auto px-2">
                                     {category.title}
                                 </h3>
                                 <div className="flex flex-wrap justify-center gap-4">
@@ -82,7 +82,7 @@ export default function Skills() {
                                             whileHover={{ scale: 1.1, rotate: 0, cursor: "grab" }}
                                             whileTap={{ cursor: "grabbing" }}
                                             initial={{ rotate: category.rotate[skillIndex % category.rotate.length] }}
-                                            className={`${category.color} px-3 py-1.5 md:px-4 md:py-2 border-4 border-black shadow-cartoon font-black text-sm md:text-base text-black whitespace-nowrap select-none`}
+                                            className={`${category.color} px-2 py-1 md:px-4 md:py-2 border-2 md:border-4 border-black shadow-cartoon font-black text-xs md:text-base text-black whitespace-nowrap select-none`}
                                         >
                                             {skill}
                                         </motion.div>

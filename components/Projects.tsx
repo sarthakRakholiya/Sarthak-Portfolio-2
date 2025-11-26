@@ -70,22 +70,22 @@ export default function Projects() {
     const ProjectIcon = ({ icon: Icon }: { icon: any }) => <Icon className="w-12 h-12 text-black" />;
 
     return (
-        <section id="projects" className="py-20 bg-muted relative overflow-hidden">
+        <section id="projects" className="py-10 md:py-20 bg-muted relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header with Prop */}
-                <div className="flex items-center justify-center gap-4 mb-16">
+                <div className="flex items-center justify-center gap-3 md:gap-4 mb-8 md:mb-16">
                     <CartoonBulb />
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight"
+                        className="text-2xl md:text-6xl font-black text-center uppercase tracking-tight"
                     >
                         Featured <span className="text-primary">Issues</span>
                     </motion.h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -94,19 +94,19 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -10, rotate: 2, scale: 1.02 }}
-                            className="group relative bg-white border-4 border-black shadow-cartoon hover:shadow-cartoon-lg transition-all rounded-sm flex flex-col h-full"
+                            className="group relative bg-white border-2 md:border-4 border-black shadow-cartoon hover:shadow-cartoon-lg transition-all rounded-sm flex flex-col h-full"
                         >
                             {/* Issue Number Badge */}
-                            <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 bg-red-500 text-white w-10 h-10 md:w-12 md:h-12 flex items-center justify-center font-black border-4 border-black rounded-full shadow-cartoon-sm z-20 -rotate-12 text-sm md:text-base">
+                            <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 bg-red-500 text-white w-8 h-8 md:w-12 md:h-12 flex items-center justify-center font-black border-2 md:border-4 border-black rounded-full shadow-cartoon-sm z-20 -rotate-12 text-xs md:text-base">
                                 #{index + 1}
                             </div>
 
                             {/* Cover Art */}
-                            <div className={`h-48 ${project.color} border-b-4 border-black relative overflow-hidden flex items-center justify-center`}>
+                            <div className={`h-32 md:h-48 ${project.color} border-b-2 md:border-b-4 border-black relative overflow-hidden flex items-center justify-center`}>
                                 <div className="absolute inset-0 opacity-20"
                                     style={{ backgroundImage: "radial-gradient(#000 2px, transparent 2px)", backgroundSize: "16px 16px" }}
                                 />
-                                <div className="bg-white p-4 border-4 border-black rounded-full shadow-cartoon transform group-hover:scale-110 transition-transform duration-300">
+                                <div className="bg-white p-3 md:p-4 border-2 md:border-4 border-black rounded-full shadow-cartoon transform group-hover:scale-110 transition-transform duration-300">
                                     <ProjectIcon icon={project.icon} />
                                 </div>
 
@@ -124,14 +124,14 @@ export default function Projects() {
                             </div>
 
                             {/* Content */}
-                            <div className="p-4 md:p-6 flex-grow flex flex-col">
-                                <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase italic">
+                            <div className="p-3 md:p-6 flex-grow flex flex-col">
+                                <h3 className="text-lg md:text-2xl font-black text-black mb-2 uppercase italic">
                                     {project.title}
                                 </h3>
 
                                 <div className="mb-4">
                                     <span className="text-[10px] md:text-xs font-black bg-black text-white px-2 py-0.5 uppercase tracking-widest">The Plot</span>
-                                    <p className="text-black font-medium mt-2 leading-relaxed border-l-4 border-gray-300 pl-3 text-sm md:text-base">
+                                    <p className="text-black font-medium mt-2 leading-relaxed border-l-2 md:border-l-4 border-gray-300 pl-2 md:pl-3 text-xs md:text-base">
                                         {project.description}
                                     </p>
                                 </div>

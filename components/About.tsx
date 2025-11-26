@@ -7,7 +7,7 @@ import CartoonBriefcase from "./CartoonBriefcase";
 
 export default function About() {
     return (
-        <section id="about" className="py-20 bg-background relative overflow-hidden">
+        <section id="about" className="py-10 md:py-20 bg-background relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -16,19 +16,19 @@ export default function About() {
                     className="max-w-6xl mx-auto"
                 >
                     {/* Section Header with Prop */}
-                    <div className="flex items-center justify-center gap-4 mb-16">
+                    <div className="flex items-center justify-center gap-3 md:gap-4 mb-8 md:mb-16">
                         <CartoonBriefcase />
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight"
+                            className="text-2xl md:text-6xl font-black text-center uppercase tracking-tight"
                         >
                             Character <span className="text-primary">Profile</span>
                         </motion.h2>
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-12 items-start">
+                    <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                         {/* Left Column: Animated Employee Badge */}
                         <motion.div
                             initial={{ rotate: -5, opacity: 0 }}
@@ -40,7 +40,7 @@ export default function About() {
                             <motion.div
                                 animate={{ rotate: [-2, 2, -2] }}
                                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                className="relative w-full max-w-[280px] md:max-w-sm"
+                                className="relative w-full max-w-[240px] md:max-w-sm scale-90 md:scale-100 origin-top"
                             >
                                 {/* Lanyard String */}
                                 <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-4 h-24 bg-red-500 border-x-4 border-black z-0" />
@@ -101,14 +101,14 @@ export default function About() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
-                                className="bg-white text-black p-6 border-4 border-black shadow-cartoon rounded-xl relative"
+                                className="bg-white text-black p-4 md:p-6 border-2 md:border-4 border-black shadow-cartoon rounded-xl relative"
                             >
                                 <div className="absolute -left-3 top-6 w-6 h-6 bg-white border-l-4 border-b-4 border-black rotate-45" />
-                                <h3 className="text-2xl font-black mb-4 flex items-center gap-2">
+                                <h3 className="text-lg md:text-2xl font-black mb-2 md:mb-4 flex items-center gap-2">
                                     <Zap className="w-6 h-6 text-yellow-500 fill-current" />
                                     The Origin Story
                                 </h3>
-                                <p className="font-medium text-base md:text-lg leading-relaxed">
+                                <p className="font-medium text-sm md:text-lg leading-relaxed">
                                     I'm a <span className="font-black bg-yellow-200 px-1">Software Development Engineer</span> with over 3.5+ years of experience. My journey involves crafting robust web applications using <span className="font-black text-blue-600">React</span> and <span className="font-black text-black">Next.js</span>. I don't just write code; I build experiences.
                                 </p>
                             </motion.div>
@@ -118,14 +118,14 @@ export default function About() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 }}
-                                className="bg-white text-black p-6 border-4 border-black shadow-cartoon rounded-xl relative ml-8"
+                                className="bg-white text-black p-4 md:p-6 border-2 md:border-4 border-black shadow-cartoon rounded-xl relative ml-4 md:ml-8"
                             >
                                 <div className="absolute -left-3 top-6 w-6 h-6 bg-white border-l-4 border-b-4 border-black rotate-45" />
-                                <h3 className="text-2xl font-black mb-4 flex items-center gap-2">
+                                <h3 className="text-lg md:text-2xl font-black mb-2 md:mb-4 flex items-center gap-2">
                                     <Brain className="w-6 h-6 text-pink-500" />
                                     Technical Arsenal
                                 </h3>
-                                <p className="font-medium text-base md:text-lg leading-relaxed">
+                                <p className="font-medium text-sm md:text-lg leading-relaxed">
                                     My inventory is stocked with deep knowledge of <span className="font-black">JavaScript (ES6+)</span> and <span className="font-black">TypeScript</span>. I wield <span className="font-black text-cyan-500">Tailwind CSS</span> and <span className="font-black text-blue-500">MUI</span> to create pixel-perfect interfaces, and manage complex state with Redux like a pro.
                                 </p>
                             </motion.div>
@@ -135,14 +135,14 @@ export default function About() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.6 }}
-                                className="bg-white text-black p-6 border-4 border-black shadow-cartoon rounded-xl relative"
+                                className="bg-white text-black p-4 md:p-6 border-2 md:border-4 border-black shadow-cartoon rounded-xl relative"
                             >
                                 <div className="absolute -left-3 top-6 w-6 h-6 bg-white border-l-4 border-b-4 border-black rotate-45" />
-                                <h3 className="text-2xl font-black mb-4 flex items-center gap-2">
+                                <h3 className="text-lg md:text-2xl font-black mb-2 md:mb-4 flex items-center gap-2">
                                     <MessageSquare className="w-6 h-6 text-green-500" />
                                     Special Abilities
                                 </h3>
-                                <p className="font-medium text-base md:text-lg leading-relaxed">
+                                <p className="font-medium text-sm md:text-lg leading-relaxed">
                                     Beyond the code, I have a passive buff in <span className="font-black bg-green-200 px-1">Mentorship</span> and <span className="font-black bg-purple-200 px-1">Communication</span>. I've architected 7+ web apps, ensuring they are scalable, testable (thanks, Cypress!), and ready for the real world.
                                 </p>
                             </motion.div>

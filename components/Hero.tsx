@@ -16,7 +16,7 @@ export default function Hero() {
                 <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute top-5 right-5 md:top-10 md:right-10 lg:right-20 w-16 h-16 md:w-24 md:h-24 bg-yellow-400 border-4 border-black rounded-full flex items-center justify-center shadow-cartoon-lg z-0"
+                    className="absolute top-5 right-5 md:top-10 md:right-10 lg:right-20 w-12 h-12 md:w-24 md:h-24 bg-yellow-400 border-2 md:border-4 border-black rounded-full flex items-center justify-center shadow-cartoon md:shadow-cartoon-lg z-0"
                 >
                     {[...Array(8)].map((_, i) => (
                         <div
@@ -33,7 +33,7 @@ export default function Hero() {
                 <motion.div
                     animate={{ x: [-100, 100, -100] }}
                     transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-24 left-5 md:top-32 md:left-20 scale-75 md:scale-100"
+                    className="absolute top-20 left-2 md:top-32 md:left-20 scale-50 md:scale-100 origin-top-left"
                 >
                     <div className="relative">
                         <div className="w-20 h-20 bg-white rounded-full border-4 border-black absolute top-0 left-0 z-10" />
@@ -67,16 +67,16 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                        className="inline-block mb-6 px-6 py-2 bg-white text-black border-4 border-black shadow-cartoon rotate-[-2deg]"
+                        className="inline-block mb-4 md:mb-6 px-4 py-1 md:px-6 md:py-2 bg-white text-black border-2 md:border-4 border-black shadow-cartoon rotate-[-2deg]"
                     >
-                        <span className="text-xl font-bold">👋 Hello, I'm Sarthak!</span>
+                        <span className="text-sm md:text-xl font-bold">👋 Hello, I'm Sarthak!</span>
                     </motion.div>
 
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-4xl md:text-7xl lg:text-8xl font-black mb-4 md:mb-6 tracking-tight"
+                        className="text-3xl md:text-7xl lg:text-8xl font-black mb-4 md:mb-6 tracking-tight"
                     >
                         CREATIVE
                         <br />
@@ -87,7 +87,7 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
-                        className="text-lg md:text-2xl font-bold mb-8 md:mb-10 max-w-2xl mx-auto md:mx-0"
+                        className="text-base md:text-2xl font-bold mb-6 md:mb-10 max-w-2xl mx-auto md:mx-0"
                     >
                         Building playful & robust web experiences with React & Next.js.
                     </motion.p>
@@ -100,13 +100,13 @@ export default function Hero() {
                     >
                         <Link
                             href="#projects"
-                            className="px-6 py-3 md:px-8 md:py-4 bg-primary text-black font-black text-base md:text-lg border-4 border-black shadow-cartoon hover:shadow-cartoon-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all rounded-xl"
+                            className="px-5 py-2.5 md:px-8 md:py-4 bg-primary text-black font-black text-sm md:text-lg border-2 md:border-4 border-black shadow-cartoon hover:shadow-cartoon-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all rounded-xl"
                         >
                             SEE MY WORK
                         </Link>
                         <Link
                             href="#contact"
-                            className="px-6 py-3 md:px-8 md:py-4 bg-white text-black font-black text-base md:text-lg border-4 border-black shadow-cartoon hover:shadow-cartoon-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all rounded-xl"
+                            className="px-5 py-2.5 md:px-8 md:py-4 bg-white text-black font-black text-sm md:text-lg border-2 md:border-4 border-black shadow-cartoon hover:shadow-cartoon-hover hover:translate-x-[2px] hover:translate-y-[2px] transition-all rounded-xl"
                         >
                             CONTACT ME
                         </Link>
